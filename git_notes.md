@@ -1,17 +1,11 @@
 # Git Notes
 
-## Merge branches without checkout
-[Work for fast-forward merges only](https://stackoverflow.com/a/17722977/2868437).
+## Fast forward a branch without checking it out
 ```
-# Merge local branch foo into local branch master,
-# without having to checkout master first.
-# Here `.` means to use the local repository as the "remote":
-git fetch . foo:master
+git fetch . dev:Docs  # Fast forward branch Docs to dev.
+```
+Based on [Work for fast-forward merges only](https://stackoverflow.com/a/17722977/2868437).
 
-# Merge remote branch origin/foo into local branch foo,
-# without having to checkout foo first:
-git fetch origin foo:foo
-```
 
 
 ## Rename local and remote branch
