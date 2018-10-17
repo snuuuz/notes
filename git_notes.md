@@ -1,5 +1,12 @@
 # Git Notes
 
+## Branches and Status
+```
+git branch -r --no-merged origin/dev  # remote branches merged into remote dev yet
+git branch    --no-merged        dev  # local branches merged into dev yet
+```    
+[Reference](https://stackoverflow.com/a/12276041)    
+
 ## Fast forward a branch without checking it out
 ```
 git fetch . dev:Docs  # Fast forward branch Docs to dev.
