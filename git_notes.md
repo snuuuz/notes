@@ -2,8 +2,8 @@
 
 ## Branches and Status
 ```
-git branch -r --no-merged origin/dev  # remote branches merged into remote dev yet
-git branch    --no-merged        dev  # local branches merged into dev yet
+git branch -r --no-merged origin/dev  # remote branches not merged into remote dev yet
+git branch    --no-merged        dev  # local branches not merged into dev yet
 ```    
 [Reference](https://stackoverflow.com/a/12276041)    
 
