@@ -7,7 +7,7 @@ When converting JS to TS, you often run into code where you have
 var f = function() { }
 f.someValue = 3;
 ```
-To get this typed properly, you can declare it as [[ref](https://stackoverflow.com/a/33392782/2868437)]:
+To get this typed properly, you can declare it as:
 ```
 function f() { }
 namespace f {
@@ -29,3 +29,5 @@ function hello() { .. }
 namespace hello { export const value = 5; }
 export default hello; 
 ```
+Ref: [StackOverflow](https://stackoverflow.com/a/33392782/2868437),
+[TS Declaration Merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html)
