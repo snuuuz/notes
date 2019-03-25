@@ -1,22 +1,28 @@
 # Git Notes
 
-## Branches and Status
+## Sync local branch with remote without checking out local branch first
 ```
-git branch -r --no-merged origin/dev  # Lists remote branches not merged into remote dev yet
-git branch    --no-merged        dev  # List local branches not merged into dev yet
+git fetch origin dev:dev            # Sync local dev     to remote dev
+git fetch origin staging:staging    # Sync local staging to remote staging
 ```
 [Reference](https://stackoverflow.com/a/12276041)    
-
-Merge without fast-forwarding:
-
-    git merge  --no-ff --no-commit dev
-
 
 ## Fast forward a branch without checking it out
 ```
 git fetch . dev:Docs  # Fast forward branch Docs to dev.
 ```
 Based on [Work for fast-forward merges only](https://stackoverflow.com/a/17722977/2868437).
+
+## Merge without fast-forwarding:
+
+    git merge  --no-ff --no-commit dev
+    
+## Branches and Status
+```
+git branch -r --no-merged origin/dev  # Lists remote branches not merged into remote dev yet
+git branch    --no-merged        dev  # List local branches not merged into dev yet
+```
+[Reference](https://stackoverflow.com/a/12276041)    
 
 
 ## Rename local and remote branch
