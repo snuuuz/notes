@@ -7,22 +7,40 @@ git fetch origin staging:staging    # Sync local staging to remote staging
 ```
 [Reference](https://stackoverflow.com/a/12276041)    
 
+
 ## Fast forward a branch without checking it out
 ```
 git fetch . dev:Docs  # Fast forward branch Docs to dev.
 ```
 Based on [Work for fast-forward merges only](https://stackoverflow.com/a/17722977/2868437).
 
+
 ## Merge without fast-forwarding:
 
     git merge  --no-ff --no-commit dev
-    
+
+
 ## Branches and Status
 ```
 git branch -r --no-merged origin/dev  # Lists remote branches not merged into remote dev yet
 git branch    --no-merged        dev  # List local branches not merged into dev yet
 ```
 [Reference](https://stackoverflow.com/a/12276041)    
+
+
+## Stash a single file
+
+If you do not want to specify a message with your stashed changes, pass the filename after a double-dash.
+
+    $ git stash -- filename.ext
+
+However, if you do want to specify a message, use push.
+
+    git stash push -m "describe changes to filename.ext" filename.ext
+
+If it's an untracked/new file, you will have to stage it first.
+
+[Reference](https://stackoverflow.com/a/55073847)    
 
 
 ## Rename local and remote branch
@@ -61,17 +79,3 @@ On branch bug/10
 Your branch is up-to-date with 'origin/bug/10'.
 nothing to commit, working tree clean
 ```
-
-## Stash a single file
-
-If you do not want to specify a message with your stashed changes, pass the filename after a double-dash.
-
-    $ git stash -- filename.ext
-
-However, if you do want to specify a message, use push.
-
-    git stash push -m "describe changes to filename.ext" filename.ext
-
-If it's an untracked/new file, you will have to stage it first.
-
-[Reference](https://stackoverflow.com/a/55073847)    
