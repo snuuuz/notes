@@ -61,3 +61,17 @@ On branch bug/10
 Your branch is up-to-date with 'origin/bug/10'.
 nothing to commit, working tree clean
 ```
+
+## Stash a single file
+
+If you do not want to specify a message with your stashed changes, pass the filename after a double-dash.
+
+    $ git stash -- filename.ext
+
+However, if you do want to specify a message, use push.
+
+    git stash push -m "describe changes to filename.ext" filename.ext
+
+If it's an untracked/new file, you will have to stage it first.
+
+[Reference](https://stackoverflow.com/a/55073847)    
